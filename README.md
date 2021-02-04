@@ -1,6 +1,16 @@
 # Android应用增量更新 - Smart App Updates
 
-## 2021-02-04  更新<ApkPatchLibraryServer>使用说明
+## 2021-02-04  更新<ApkPatchLibrary>
+ 1. 更新ApkPatchLibrary项目结构为AndroidStudio
+ 2. 更新JNI编译方式为CMake
+ 3. 保存了一份编译结果在out目录
+ ---重新编译方法: 
+ 4. 直接用AS打开项目, 打包生成APK即可
+ 5. 打包完成后在 app/buildintermediates/cmake 目录下就能找到 release 版的so文件
+  
+ 
+
+## 2021-02-04  更新<ApkPatchLibraryServer>
  1. 更新编译方式为CMake, cmake配置文件为 jni/CMakeLists.txt
  2. 编译环境必须配置JAVA_HOME
  3. 当前cmake配置只支持Linux, 如果需要其他系统平台请修改cmake配置文件 第6行和第18行
