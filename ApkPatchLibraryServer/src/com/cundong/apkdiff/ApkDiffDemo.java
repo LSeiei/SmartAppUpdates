@@ -28,6 +28,7 @@ public class ApkDiffDemo {
 	}
 
 	static {
-		System.loadLibrary("ApkPatchLibraryServer");
+		System.load("/mnt/hgfs/TestAgora/SmartAppUpdates-master/ApkPatchLibraryServer/resources/native/linux/libApkPatchLibraryServer.so");
+//		System.loadLibrary("ApkPatchLibraryServer");
 	}
 }

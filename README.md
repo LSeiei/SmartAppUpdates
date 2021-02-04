@@ -1,5 +1,18 @@
 # Android应用增量更新 - Smart App Updates
 
+## 2021-02-04  更新<ApkPatchLibraryServer>使用说明
+ 1. 更新编译方式为CMake, cmake配置文件为 jni/CMakeLists.txt
+ 2. 编译环境必须配置JAVA_HOME
+ 3. 当前cmake配置只支持Linux, 如果需要其他系统平台请修改cmake配置文件 第6行和第18行
+ 4. 编译:
+        4.1 准备环境: 安装jDK(配置JAVA_HOME)  安装CMake(最低版本:3.19.2)
+        4.2 进入build目录
+        4.3 执行: cmake ../jni/&&make install ../jni/
+        4.4 执行结果在: resources/native/linux/libApkPatchLibraryServer.so
+ 5. libApkPatchLibraryServer.so 包括了生成差异包和合成目标表两个功能
+ 6. start_class_diff.sh 和 start_class_patch.sh 是命令执行java的脚步, 方便在linux测试
+
+
 ------
 
 ## 介绍
